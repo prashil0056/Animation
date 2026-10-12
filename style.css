@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #08080c;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.badge {
+    background-color: #222;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 64px;
+    margin: 25px 0;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #aaa;
+    max-width: 500px;
+}
+
+button {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hero-button {
+    margin-top: 20px;
+}
+
+.laptop-area {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.laptop {
+    width: 400px;
+}
+
+.screen {
+    height: 240px;
+    background: linear-gradient(135deg, #222, #111);
+    border: 8px solid #333;
+    border-radius: 12px 12px 4px 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen span {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.keyboard {
+    height: 25px;
+    background-color: #333;
+    transform: perspective(300px) rotateX(45deg);
+    margin-top: 5px;
+}
+
+.specs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.spec-card {
+    width: 180px;
+    padding: 25px;
+    background-color: #141419;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.spec-card h2 {
+    margin: 0;
+}
+
+.spec-card p {
+    color: #888;
+}
+
+.cta {
+    text-align: center;
+    padding: 80px;
+}
+
+.cta button {
+    margin-top: 15px;
+}
+
+@keyframes slideUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.hero-content {
+    animation: slideUp 0.8s ease;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.laptop {
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes glow {
+
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 150, 255, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 35px rgba(0, 150, 255, 0.7);
+    }
+
+}
